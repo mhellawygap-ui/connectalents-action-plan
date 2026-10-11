@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/connectalents-logo.png">
+<title>Connectalents Organic Growth Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: white document in Connectalents' identity. Sticky section bar on top; every point follows the same 4-block order:
+   Strategy -> Real examples -> Recommendation & why -> Actualize at Connectalents. Single light look by request (white background). */
+:root{
+  color-scheme: light;
+  --white:#ffffff;
+  --paper:#f7f7fb;
+  --line:#e6e5f0;
+  --ink:#16153a;
+  --ink-2:#55546f;
+  --navy:#242264;        /* logo navy */
+  --indigo:#1f1c4b;      /* site hero */
+  --lav:#f0effa;
+  --green:#1cae49;       /* site CTA green */
+  --green-logo:#50a043;  /* logo green */
+  --mint:#ebf7ef;
+  --amber:#b7791f;
+  --f:"Poppins","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.65;margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance;color:var(--navy)}
+p{margin:0}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:6px}
+sup a{color:var(--green);text-decoration:none;font-weight:600;font-size:11px;padding-left:1px}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+
+/* ---------- Sticky navigation ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.topbar img{height:34px;width:auto;flex:none}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;padding-block:4px}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;font-size:12.5px;font-weight:500;color:var(--ink-2);padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--white);white-space:nowrap}
+.chips a b{color:var(--green);font-weight:700;margin-right:4px}
+.chips a:hover{border-color:var(--navy);color:var(--navy)}
+.chips a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chips a.on b{color:#8fe3a8}
+
+/* ---------- Cover ---------- */
+.cover{padding-block:56px 40px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-180px;top:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--lav) 0%,rgba(240,239,250,0) 70%);pointer-events:none}
+.pill{display:inline-flex;max-width:100%;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:var(--green);border:1px solid #bfe6cb;background:var(--mint);padding:6px 14px;border-radius:999px}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.cover-logo{height:64px;width:auto;margin-bottom:34px}
+.cover h1{font-size:clamp(32px,5.4vw,56px);font-weight:700;letter-spacing:-.02em;margin-top:18px;max-width:20ch;position:relative;z-index:1}
+.cover h1 span{color:var(--green)}
+.cover .lede{font-size:17px;color:var(--ink-2);max-width:62ch;margin-top:16px}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:13px;color:var(--ink-2)}
+.meta-row b{color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:30px}
+.stat{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--white)}
+.stat b{display:block;font-size:26px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.stat b i{font-style:normal;color:var(--green)}
+.stat span{font-size:12.5px;color:var(--ink-2)}
+
+/* ---------- Contents + how to read ---------- */
+.intro{padding-block:40px;border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px}
+.intro-grid>*{min-width:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}
+.toc a{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);font-size:14px;font-weight:500;background:var(--white)}
+.toc a:hover{border-color:var(--navy)}
+.toc a span{width:34px;height:34px;border-radius:9px;background:var(--lav);color:var(--navy);display:grid;place-items:center;font-weight:700;font-size:13px}
+.legend{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.lg{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:13.5px;color:var(--ink-2)}
+.lg b{display:block;color:var(--ink);font-size:14px}
+
+/* ---------- Section ---------- */
+.sec{padding-block:52px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;margin-bottom:26px}
+.num{width:64px;height:64px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.num.alt{background:var(--green)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.sec-head h2{font-size:clamp(23px,3.2vw,32px);font-weight:700}
+.sec-head .lead{color:var(--ink-2);margin-top:8px;max-width:70ch;font-size:15.5px}
+.top-link{font-size:12px;color:var(--ink-2);text-decoration:none;float:right;margin-top:-14px}
+.top-link:hover{color:var(--navy)}
+
+.block{border-radius:16px;padding:22px 24px;margin-top:16px}
+.block>h3{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.block>h3 .ic{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;flex:none}
+.block>h3 .ic svg{width:15px;height:15px}
+.b-strat{border:1px solid var(--line);background:var(--white)}
+.b-strat>h3{color:var(--navy)} .b-strat .ic{background:var(--lav)}
+.b-ex{background:var(--paper)}
+.b-ex>h3{color:var(--ink-2)} .b-ex .ic{background:var(--white)}
+.b-rec{background:var(--lav);border:1px solid #dddbf1}
+.b-rec>h3{color:var(--navy)} .b-rec .ic{background:var(--navy)}
+.b-act{background:var(--mint);border:1px solid #c6ebd2}
+.b-act>h3{color:#137a35} .b-act .ic{background:var(--green)}
+
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cols>*,.cols3>*{min-width:0}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card h4{font-size:15px;margin-bottom:6px}
+.card .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.muted{color:var(--ink-2)}
+.small{font-size:13px}
+ul.dots{margin:0;padding-left:18px}
+ul.dots li{margin-block:3px}
+ul.dots li::marker{color:var(--green)}
+
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.vs>div{border-radius:12px;padding:14px 16px;min-width:0}
+.vs .no{background:var(--paper);color:var(--ink-2)}
+.vs .yes{background:var(--white);border:1.5px solid var(--green)}
+.vs .lab{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.vs .no .lab{color:#9a99ad} .vs .yes .lab{color:var(--green)}
+.vs .no p{text-decoration:line-through;text-decoration-color:#c8c7d6}
+.vs .yes p{font-weight:500;color:var(--ink)}
+
+.post{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px}
+.post .who{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12.5px;font-weight:600;color:var(--navy)}
+.post .av{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+.post .cta{margin-top:8px;font-weight:600;color:var(--green)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th{text-align:left;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--navy);padding:11px 14px}
+td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+td.go{font-weight:600;color:#137a35}
+tr:nth-child(even) td{background:#fbfbfe}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.flow span{background:var(--white);border:1.5px solid var(--navy);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;color:var(--navy)}
+.flow span.hot{background:var(--green);border-color:var(--green);color:#fff}
+.flow i{font-style:normal;color:var(--green);font-weight:700}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13px;border:1px dashed #b9b8d6;border-radius:8px;padding:4px 10px;color:var(--navy);background:var(--white)}
+
+.fact{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start;padding-block:10px;border-top:1px solid var(--line)}
+.fact:first-of-type{border-top:none;padding-top:0}
+.fact .fig{font-size:24px;font-weight:700;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+.fact .fig small{display:block;font-size:11px;font-weight:500;color:var(--ink-2);letter-spacing:.02em;margin-top:3px}
+.fact p{font-size:14px}
+
+.rec-main{font-size:17px;font-weight:600;color:var(--navy);line-height:1.45}
+.why{margin-top:14px;background:var(--white);border-radius:12px;padding:14px 16px;border-left:4px solid var(--navy)}
+.why b.w{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:4px}
+.why ul{margin:0;padding-left:18px}
+.why li{margin-block:4px;font-size:14px}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;background:var(--white);border-radius:12px;padding:12px 14px}
+.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.steps b{color:var(--navy)}
+.who-when{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.who-when span{font-size:11.5px;font-weight:500;border-radius:6px;padding:2px 8px;background:var(--mint);color:#137a35}
+.who-when span+span{background:var(--lav);color:var(--navy)}
+
+.mix{display:flex;height:40px;border-radius:10px;overflow:hidden;margin:4px 0 6px}
+.mix div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;padding-inline:4px}
+
+.pillar{margin-top:22px;border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.pillar-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.pillar-head .letter{width:36px;height:36px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
+.pillar-head h3{font-size:19px;flex:1;min-width:0}
+.pillar-head .pct{font-weight:700;font-size:20px;color:var(--green);font-variant-numeric:tabular-nums}
+.pillar .block{margin-top:12px;padding:16px 18px}
+
+.case4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.case4>div{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0;font-size:13.5px}
+.case4>div:last-child{background:var(--navy);color:#fff;border-color:var(--navy)}
+.case4 .lab{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.case4 ul{margin:0;padding-left:16px}
+
+.funnel{display:flex;flex-direction:column;align-items:center;gap:4px}
+.funnel div{background:var(--navy);color:#fff;border-radius:10px;padding:9px 14px;text-align:center;font-weight:600;font-size:14px;max-width:100%}
+.funnel i{font-style:normal;color:var(--green);font-weight:700;line-height:1}
+
+.months{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.month{border:1px solid var(--line);border-top:5px solid var(--navy);border-radius:12px;padding:16px 18px;background:var(--white);min-width:0}
+.month:nth-child(2){border-top-color:var(--green-logo)}
+.month:nth-child(3){border-top-color:var(--green)}
+.month h4{font-size:17px;margin:2px 0 8px}
+.month .when{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+
+.kpi{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.kpi span{border:1px solid var(--line);border-radius:8px;padding:7px 11px;font-size:13.5px;font-weight:600;color:var(--navy);background:var(--white)}
+.kpi span.end{background:var(--green);border-color:var(--green);color:#fff}
+.kpi i{font-style:normal;color:var(--green);font-weight:700}
+
+.closing{background:var(--indigo);color:#fff;border-radius:22px;padding:clamp(24px,4vw,44px);margin-block:48px}
+.closing h2{color:#fff;font-size:clamp(26px,4vw,40px)}
+.closing h2 span{color:#6fdc8f}
+.closing p{color:#cfcde6}
+.closing .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.closing .cards>div{background:rgba(255,255,255,.07);border-radius:14px;padding:16px 18px;min-width:0}
+.closing h4{color:#fff;font-size:15px;margin-bottom:6px}
+
+.sources{padding-block:40px 60px}
+.sources ol{margin:14px 0 0;padding-left:22px;font-size:13px;color:var(--ink-2);columns:2;column-gap:32px}
+.sources li{margin-bottom:6px;break-inside:avoid}
+.sources a{word-break:break-word}
+.disc{margin-top:16px;font-size:12.5px;color:var(--ink-2);background:var(--paper);border-radius:10px;padding:12px 14px}
+footer{border-top:1px solid var(--line);padding-block:20px 30px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--ink-2)}
+footer img{height:28px;width:auto}
+
+@media (max-width:860px){
+  .intro-grid,.cols,.cols3,.months,.closing .cards{grid-template-columns:1fr}
+  .stats,.case4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sources ol{columns:1}
+  .topbar img{height:28px}
+}
+@media (max-width:480px){
+  .toc,.vs,.stats,.case4{grid-template-columns:1fr}
+  .sec-head{grid-template-columns:1fr;gap:12px}
+  .num{width:52px;height:52px;font-size:20px}
+  .fact{grid-template-columns:1fr;gap:4px}
+  .block{padding:18px}
+}
+@media print{
+  @page{size:A4;margin:12mm}
+  html{scroll-padding-top:0}
+  body{font-size:12.5px}
+  .topbar,.top-link{display:none}
+  .wrap{max-width:none;padding:0}
+  .sec,.intro{break-before:page;border:none;padding-block:0 10px}
+  .cover{border:none;padding-top:10px}
+  .block,.card,.post,.month,.steps li,.fact,.case4>div,.pillar-head,.why{break-inside:avoid}
+  .closing{break-before:page}
+  .sources{break-before:page}
+}
+</style>
+</head>
+<body>
+
+
+<!-- ============ STICKY NAV ============ -->
+<nav class="topbar" aria-label="Sections">
+  <div class="wrap">
+    <a href="#top" aria-label="Back to top"><img src="assets/connectalents-logo.png" alt="Connectalents"></a>
+    <div class="chips" id="chips">
+      <a href="#overview">Overview</a>
+      <a href="#s1"><b>1</b>Buying situations</a>
+      <a href="#s2"><b>2</b>LinkedIn</a>
+      <a href="#s3"><b>3</b>Content</a>
+      <a href="#s4"><b>4</b>Lead magnets</a>
+      <a href="#s5"><b>5</b>Outbound</a>
+      <a href="#s6"><b>6</b>Signals Desk</a>
+      <a href="#s7"><b>7</b>Hiring Pulse</a>
+      <a href="#s8"><b>8</b>Recruiters</a>
+      <a href="#s9"><b>9</b>Funnel</a>
+      <a href="#d90">90 days</a>
+      <a href="#kpis">KPIs</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<!-- ============ COVER ============ -->
+<header class="cover">
+  <div class="wrap">
+    <img class="cover-logo" src="assets/connectalents-logo.png" alt="Connectalents, Recruitment &amp; HRO Solutions">
+    <div><span class="pill">Organic Client Acquisition · Strategy &amp; Action Plan</span></div>
+    <h1>Stop marketing HR. <span>Start solving hiring problems.</span></h1>
+    <p class="lede">A 9-point organic growth engine for Connectalents across Saudi Arabia and the UAE. Every point follows the same order: the strategy, real examples, our recommendation and why, then the steps to put it into practice at Connectalents.</p>
+    <div class="meta-row"><span><b>Markets:</b> KSA · UAE (Egypt as delivery hub)</span><span><b>Horizon:</b> first 90 days</span><span><b>Prepared:</b> October 2026</span></div>
+    <div class="stats">
+      <div class="stat"><b>130<i>+</i></b><span>clients across MENA</span></div>
+      <div class="stat"><b>16<i>+</i></b><span>countries served</span></div>
+      <div class="stat"><b>1,200<i>+</i></b><span>outsourced employees managed</span></div>
+      <div class="stat"><b>12<i>+</i></b><span>years of HR expertise</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="intro" id="overview">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Contents</p>
+        <h2 style="font-size:24px;margin-top:6px">The plan in the original sequence</h2>
+        <div class="toc">
+          <a href="#context"><span>0</span>Starting point &amp; core idea</a>
+          <a href="#s1"><span>1</span>4 buying situations</a>
+          <a href="#s2"><span>2</span>LinkedIn social selling</a>
+          <a href="#s3"><span>3</span>Content strategy: 5 types</a>
+          <a href="#s4"><span>4</span>Lead magnets</a>
+          <a href="#s5"><span>5</span>Organic outbound</a>
+          <a href="#s6"><span>6</span>Hiring Signals Desk</a>
+          <a href="#s7"><span>7</span>Own a recurring asset</a>
+          <a href="#s8"><span>8</span>Recruiters as distribution</a>
+          <a href="#s9"><span>9</span>The final funnel</a>
+          <a href="#d90"><span>90</span>First 90 days</a>
+          <a href="#kpis"><span>K</span>KPIs &amp; positioning</a>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">How to read each point</p>
+        <h2 style="font-size:24px;margin-top:6px">Four blocks, always in this order</h2>
+        <div class="legend">
+          <div class="lg"><span class="block b-strat" style="margin:0;padding:6px;border-radius:8px"><span class="ic" style="width:22px;height:22px;display:grid;place-items:center;background:var(--lav);border-radius:6px"><svg viewBox="0 0 16 16" width="13" height="13"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span></span><div><b>The strategy</b>What we do and how it works.</div></div>
+          <div class="lg"><span class="block b-ex" style="margin:0;padding:6px;border-radius:8px"><span style="width:22px;height:22px;display:grid;place-items:center;background:#fff;border-radius:6px"><svg viewBox="0 0 16 16" width="13" height="13"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span></span><div><b>Real examples &amp; market evidence</b>Sourced data and real cases from the market. Numbers link to the sources list.</div></div>
+          <div class="lg"><span class="block b-rec" style="margin:0;padding:6px;border-radius:8px"><span style="width:22px;height:22px;display:grid;place-items:center;background:var(--navy);border-radius:6px"><svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span></span><div><b>Recommendation &amp; why</b>The direction we advise, and the reasoning behind it.</div></div>
+          <div class="lg"><span class="block b-act" style="margin:0;padding:6px;border-radius:8px"><span style="width:22px;height:22px;display:grid;place-items:center;background:var(--green);border-radius:6px"><svg viewBox="0 0 16 16" width="13" height="13"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><div><b>Actualize at Connectalents</b>Numbered steps with an owner and timing.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 0 CONTEXT ============ -->
+<section class="sec" id="context">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num alt">0</div>
+      <div>
+        <p class="kicker">Starting point</p>
+        <h2>Connectalents has far more to sell than posts about HR and jobs</h2>
+        <p class="lead">The core idea: <b>Stop Marketing HR. Start Solving Hiring Problems.</b> We sell business outcomes, not HR services.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="cols">
+        <div class="card"><span class="tag">What they already have</span>
+          <ul class="dots"><li>Recruitment, Executive Search and RPO</li><li>HR Outsourcing, HRBPO and Payroll</li><li>Employer of Record (EOR)</li><li>Certified assessments: Hogan, SHL (CEB), Thomas International</li><li>Coverage of Saudi Arabia, the UAE, Egypt and wider MENA</li></ul>
+        </div>
+        <div class="card"><span class="tag">What the market hands them</span>
+          <ul class="dots"><li>Saudi Arabia launched a new Nitaqat phase in 2026 to localize about 340,000 more jobs over 3 years</li><li>Recent Saudization decisions reach 60% in marketing and sales and 70% in procurement</li><li>The UAE continues its private-sector Emiratisation targets</li></ul>
+        </div>
+      </div>
+      <p style="margin-top:16px"><span class="tag" style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Organic positioning</span></p>
+      <p class="rec-main" style="margin-top:4px">Connectalents = The MENA Hiring &amp; Workforce Partner</p>
+      <div class="vs">
+        <div class="no"><span class="lab">Not</span><p>"We are a recruitment company."</p></div>
+        <div class="yes"><span class="lab">But</span><p>Hiring in Saudi/UAE? We help you find, hire and manage the right people, faster and compliantly.</p></div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples &amp; market evidence</h3>
+      <div class="cols">
+        <div>
+          <div class="fact"><div class="fig">~340K<small>jobs · 3 yrs</small></div><p>HRSD introduced the next phase of the developed Nitaqat program on 26 April 2026, targeting about 340,000 jobs for Saudi nationals over three years.<sup><a href="#r1">1</a></sup></p></div>
+          <div class="fact"><div class="fig">60%<small>marketing</small></div><p>Saudization of targeted marketing roles from 19 April 2026 (establishments with 3+ such workers, SAR 5,500 minimum salary). Sales roles 60%, procurement 70%, project management 70% from 14 February 2027.<sup><a href="#r2">2</a></sup></p></div>
+          <div class="fact"><div class="fig">69<small>occupations</small></div><p>Occupations reserved 100% for Saudis from April 2026, including HR, translation, administration, data entry and PR roles.<sup><a href="#r2">2</a></sup></p></div>
+        </div>
+        <div>
+          <div class="fact"><div class="fig">10%<small>UAE · end 2026</small></div><p>Emiratisation target for skilled roles in private firms with 50+ employees, rising 1% every six months, with evasion fines up to AED 500,000.<sup><a href="#r3">3</a></sup> The next deadline is 31 December.<sup><a href="#r4">4</a></sup></p></div>
+          <div class="fact"><div class="fig">6.4%<small>Saudi unemployment</small></div><p>Saudi national unemployment in Q1 2026, near record lows. Qualified Saudi talent is scarce and contested, which makes sourcing it a paid service.<sup><a href="#r5">5</a></sup></p></div>
+          <div class="fact"><div class="fig">75%<small>KSA employers</small></div><p>Share of KSA employers in the Hays GCC Salary Guide 2026 planning to increase Saudi headcount this year; 42% of UAE companies plan to grow Emirati headcount.<sup><a href="#r6">6</a></sup></p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Lead every channel with the outcome line, and make <em>localization-ready hiring</em> the first proof point. Keep "recruitment, RPO, EOR" as the how, never the headline.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>B2B buyers reach out late. In 6sense's 2025 study the first seller contact came 61% of the way through the buying process, and buyers contacted their top-ranked vendor first about 80% of the time.<sup><a href="#r11">11</a></sup> Connectalents has to be known for the problem before the client starts looking.</li>
+          <li>Regulation gives every message a date. Quotas, salary floors and deadlines are concrete, so "Are you ready for 60% Saudization in marketing?" lands harder than "We provide recruitment."</li>
+          <li>The outcome line is broad enough to cover all 10 services, so the brand doesn't have to be repositioned for each one.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Rewrite the homepage hero</b> around the outcome line, keeping "Recruitment &amp; HR Outsourcing in Egypt, UAE &amp; KSA" as the supporting line for SEO.<div class="who-when"><span>Marketing</span><span>Week 1</span></div></div></li>
+        <li><div><b>Align the LinkedIn page, X (@CTMENA) and Instagram</b> tagline, About section and banner to "The MENA Hiring &amp; Workforce Partner".<div class="who-when"><span>Marketing</span><span>Week 1</span></div></div></li>
+        <li><div><b>Write a one-page messaging guide</b> (outcome line plus 3 proofs: 130+ clients, 16+ countries, 60% less time-to-hire) and brief every recruiter and salesperson.<div class="who-when"><span>Marketing + CEO</span><span>Week 2</span></div></div></li>
+        <li><div><b>Name a regulation owner</b> who checks HRSD (KSA) and MoHRE (UAE) announcements weekly, so every quota or fine quoted in content is current and sourced.<div class="who-when"><span>HR Consultancy team</span><span>Ongoing</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1 BUYING SITUATIONS ============ -->
+<section class="sec" id="s1">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div>
+        <p class="kicker">Targeting</p>
+        <h2>Split the market into 4 buying situations</h2>
+        <p class="lead">Instead of targeting "companies in the GCC", target the company at the moment its need appears. This makes the organic channel itself intent-driven.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Trigger</th><th>Likely buyer</th><th>Connectalents sells</th></tr></thead>
+          <tbody>
+            <tr><td>The company is hiring 5–20+ positions</td><td>HR Director / TA Head</td><td class="go">Recruitment / RPO</td></tr>
+            <tr><td>A company entering KSA/UAE</td><td>CEO / COO / HR</td><td class="go">EOR + Recruitment</td></tr>
+            <tr><td>An SME growing fast</td><td>Founder / GM</td><td class="go">HRBPO</td></tr>
+            <tr><td>Saudization / Emiratisation pressure</td><td>HR / CEO</td><td class="go">Localization Recruitment + Compliance</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples &amp; market evidence</h3>
+      <div class="cols">
+        <div class="card"><span class="tag">Hiring surge</span><h4>Saudi hiring up 51.5%</h4><p class="small muted">Jisr's "State of Hiring in Saudi Arabia" (4,700+ companies) found average monthly new hires rose 51.5% in H1 2025, with Saudis the largest group at 31% of new hires. F&amp;B, retail and wholesale led.<sup><a href="#r8">8</a></sup></p></div>
+        <div class="card"><span class="tag">Market entry</span><h4>~600 regional HQs in KSA</h4><p class="small muted">The Investment Minister put companies with a regional HQ in the Kingdom at about 600, with 34 new RHQ licenses in Q2 2025 alone. Each one is building a local team.<sup><a href="#r9">9</a></sup></p></div>
+        <div class="card"><span class="tag">SME growth</span><h4>Egypt fintech: HR in 30 days</h4><p class="small muted">Connectalents' own case: an Egyptian fintech had payroll, policies and contracts live within 30 days through HRBPO, with 80% cost savings.<sup><a href="#r17">17</a></sup></p></div>
+        <div class="card"><span class="tag">Localization pressure</span><h4>Marketing teams of 3+</h4><p class="small muted">Any KSA company with 3+ marketing staff must now be 60% Saudi at SAR 5,500+ per month. That is a dated, measurable trigger.<sup><a href="#r2">2</a></sup></p></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Run all four, but put 70% of Month 1 effort on two: <b>Saudization pressure</b> and <b>market entry (EOR + recruitment)</b>.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>They come with deadlines. A quota with an effective date forces a decision; a general "we're growing" does not.</li>
+          <li>They are easy to find. Regulated professions and new RHQ licenses are public, so the Signals Desk (point 6) can list target companies every week.</li>
+          <li>They lead to larger, repeat deals: localization becomes volume hiring, and market entry becomes EOR plus payroll plus recruitment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Map each situation to a landing page</b>: Recruitment &amp; Selection (RPO), Employer of Record, HRBPO, and HR Consultancy for localization, each with its own headline and CTA.<div class="who-when"><span>Marketing + Web</span><span>Weeks 1–2</span></div></div></li>
+        <li><div><b>Add a "Buying situation" field</b> to the CRM and to the website's "Service Needed" form, so every lead is tagged from day one.<div class="who-when"><span>Sales Ops</span><span>Week 2</span></div></div></li>
+        <li><div><b>Tag the last 12 months of won deals</b> by situation to confirm which closes fastest and at the highest value, and adjust the 70% focus if the data disagrees.<div class="who-when"><span>Sales</span><span>Week 2</span></div></div></li>
+        <li><div><b>Define 3–4 ICPs</b> (industry, size, city, buyer title) inside the two priority situations, for example "KSA retail and FMCG groups, 200–2,000 staff, HR Director".<div class="who-when"><span>Sales + Marketing</span><span>Week 2</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 LINKEDIN ============ -->
+<section class="sec" id="s2">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div>
+        <p class="kicker">Main engine</p>
+        <h2>The strongest engine: LinkedIn social selling</h2>
+        <p class="lead">Don't rely on the company page alone. Publish on 3 levels at the same time. The CEO's personal brand matters most in B2B.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="cols3">
+        <div class="card"><span class="tag">Level 1</span><h4>Connectalents Page</h4><p class="muted small">Authority + proof</p></div>
+        <div class="card"><span class="tag">Level 2</span><h4>CEO / Founder</h4><p class="muted small">Business perspective</p></div>
+        <div class="card"><span class="tag">Level 3</span><h4>Recruitment / HR experts</h4><p class="muted small">Practical expertise</p></div>
+      </div>
+      <div class="cols" style="margin-top:14px">
+        <div class="vs" style="grid-template-columns:1fr;margin:0">
+          <div class="no"><span class="lab">Instead of</span><p>5 Tips for Better Recruitment</p></div>
+          <p class="small muted">Here the content itself becomes a <b>lead-generation asset</b>: a real number, an insight, then a keyword CTA.</p>
+        </div>
+        <div class="post">
+          <div class="who"><span class="av">CEO</span>Connectalents CEO · LinkedIn</div>
+          <p>We reviewed 300+ CVs for one Sales Manager role in Riyadh.<br>Only 17 actually matched the brief.<br>Here is what employers should know before opening the role.</p>
+          <p class="muted small" style="margin-top:6px">[insight]</p>
+          <p class="cta">Hiring the same role? DM me "Riyadh".</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples &amp; market evidence</h3>
+      <div class="cols">
+        <div>
+          <div class="fact"><div class="fig">10.9M<small>LinkedIn · KSA</small></div><p>LinkedIn users in Saudi Arabia (Sept 2026), 28% of the population; 51% are aged 25–34.<sup><a href="#r10">10</a></sup></p></div>
+          <div class="fact"><div class="fig">95%<small>hidden buyers</small></div><p>of hidden buyers say strong thought leadership makes them more open to sales outreach (Edelman–LinkedIn 2025).<sup><a href="#r12">12</a></sup></p></div>
+        </div>
+        <div>
+          <div class="fact"><div class="fig">9–72×<small>reach per follower</small></div><p>Refine Labs' Q3 2025 data: three employee profiles earned 9,269–70,651 impressions per 1,000 followers vs 980 for the company page.<sup><a href="#r13">13</a></sup></p></div>
+          <div class="fact"><div class="fig">6.9%<small>engagement</small></div><p>Native document (carousel) posts average 6.90% engagement on LinkedIn, the highest of any format, vs 5.00% for images.<sup><a href="#r14">14</a></sup></p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Make people the channel: the CEO plus 3 recruiters carry reach and conversations, and the company page carries proof (cases, the Hiring Pulse, compliance alerts). Use document carousels for data posts.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>Personal profiles get many times the reach of brand pages for the same audience size, so the same effort reaches more decision makers.<sup><a href="#r13">13</a></sup></li>
+          <li>Buyers in the GCC buy from people they know. A CEO voice with real numbers builds trust that a logo can't.</li>
+          <li>Carousels suit data-heavy hiring content (salary ranges, quotas, comparisons) and get the highest engagement on the platform.<sup><a href="#r14">14</a></sup></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Optimize the CEO's LinkedIn profile</b>: outcome-led headline, a Featured link to the free consultation, and a banner with the 4 proof numbers.<div class="who-when"><span>CEO + Marketing</span><span>Week 1</span></div></div></li>
+        <li><div><b>Set the cadence</b>: CEO 3 posts/week, company page 4/week, each active recruiter 2/week. Hold one 45-minute weekly interview with the CEO and ghostwrite from it.<div class="who-when"><span>Content lead</span><span>From Week 2</span></div></div></li>
+        <li><div><b>Feed posts with real desk data</b>: recruiters log one number a week (CVs reviewed, matches, offers declined, days open) in a shared sheet for "300 CVs → 17 matches" posts.<div class="who-when"><span>Recruiters</span><span>Weekly</span></div></div></li>
+        <li><div><b>Use keyword CTAs</b> ("DM me Riyadh") and log every keyword reply in the CRM with its source post.<div class="who-when"><span>Sales</span><span>Ongoing</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 CONTENT ============ -->
+<section class="sec" id="s3">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div>
+        <p class="kicker">Content</p>
+        <h2>Content strategy = 5 types only</h2>
+        <p class="lead">Every post fits one of five pillars, in this mix. Each pillar below has its own strategy, example, recommendation and steps.</p>
+      </div>
+    </div>
+
+    <div class="mix" role="img" aria-label="Content mix: A Hiring Intelligence 30%, B Localization and Compliance 20%, C Real Hiring Cases 20%, D Available Talent 15%, E Employer Pain 15%">
+      <div style="width:30%;background:#242264">A · Intelligence 30%</div>
+      <div style="width:20%;background:#3d3a8c">B · Compliance 20%</div>
+      <div style="width:20%;background:#6461b8">C · Cases 20%</div>
+      <div style="width:15%;background:#1cae49">D · Talent 15%</div>
+      <div style="width:15%;background:#50a043">E · Pain 15%</div>
+    </div>
+
+    <!-- A -->
+    <div class="pillar" id="s3a">
+      <div class="pillar-head"><span class="letter">A</span><h3>Hiring Intelligence</h3><span class="pct">30%</span></div>
+      <div class="block b-strat"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+        <p style="margin-bottom:10px">The most important pillar. The goal is to turn Connectalents from an agency into a <b>source of market intelligence</b>.</p>
+        <div class="cols">
+          <div class="card"><span class="tag">Saudi Salary Watch</span><p>What does a Sales Manager actually cost in Riyadh in 2026?</p></div>
+          <div class="card"><span class="tag">Talent Availability</span><p>Hardest tech roles to hire in UAE right now.</p></div>
+          <div class="card"><span class="tag">Hiring Reality</span><p>100 applications ≠ 100 candidates.</p></div>
+          <div class="card"><span class="tag">Saudi vs UAE</span><p>Hiring a Finance Manager: Riyadh vs Dubai.</p></div>
+        </div>
+      </div>
+      <div class="block b-ex"><h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real example</h3>
+        <p>Cooper Fitch's Salary Guide UAE 2026 (1,000+ organizations, close to 1 million employees) was covered in regional business press for one headline number: salary growth projected to ease to 1.6% in 2026.<sup><a href="#r7">7</a></sup> One clear data point is enough to get a firm quoted.</p>
+      </div>
+      <div class="block b-rec"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+        <p class="rec-main">Build pillar A on Connectalents' own Salary &amp; Benefits Survey (9 markets) and live desk data, and always end with one practical takeaway.</p>
+        <div class="why"><b class="w">Why</b><ul>
+          <li>86% of hidden decision makers prefer content that challenges their assumptions, and 91% value insights that reveal needs they hadn't recognized.<sup><a href="#r12">12</a></sup></li>
+          <li>57% prefer quick takeaways over deep content, which fits one-number posts and short carousels.<sup><a href="#r12">12</a></sup></li>
+          <li>Own data can't be copied by competitors and gives the CEO something new to say every week.</li>
+        </ul></div>
+      </div>
+      <div class="block b-act"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+        <ol class="steps">
+          <li><div><b>Pull 8 Salary Watch posts</b> from the Salary &amp; Benefits Survey; publish ranges only and point to the full survey.<div class="who-when"><span>Content + Survey team</span><span>Month 1</span></div></div></li>
+          <li><div><b>Run a fortnightly "Riyadh vs Dubai" carousel</b> for one role, from the survey plus placement data.<div class="who-when"><span>Content</span><span>Every 2 weeks</span></div></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="pillar" id="s3b">
+      <div class="pillar-head"><span class="letter">B</span><h3>Localization &amp; Compliance</h3><span class="pct">20%</span></div>
+      <div class="block b-strat"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+        <p>A very big opportunity right now. Example: Saudi Arabia raised localization of marketing and sales roles to 60%, applied from April 2026, plus other profession-specific decisions. We build a series:</p>
+        <div class="post" style="margin-top:12px"><b>KSA Hiring Alert</b><br>60% Saudization is now required for selected marketing roles. Is your hiring plan ready?</div>
+        <div class="flow" style="margin-top:12px"><span>What changed</span><i>→</i><span>Who is affected</span><i>→</i><span>What HR needs to do</span><i>→</i><span class="hot">How we can help</span></div>
+        <div class="tags" style="margin-top:12px"><span>Emiratisation Update</span><span>Nitaqat Update</span><span>Saudi Salary Update</span><span>New Labour Regulation</span></div>
+        <p style="margin-top:10px">This creates <b>commercial urgency</b> without hard selling.</p>
+      </div>
+      <div class="block b-ex"><h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples: alerts ready to publish</h3>
+        <div class="cols">
+          <div class="card"><span class="tag">KSA · Feb 2027</span><h4>Project management goes to 70%</h4><p class="small muted">From 14 February 2027 for establishments with 3+ people in targeted roles.<sup><a href="#r2">2</a></sup> Four months of runway: ideal for a "start hiring now" alert.</p></div>
+          <div class="card"><span class="tag">UAE · 31 Dec 2026</span><h4>Year-end Emiratisation deadline</h4><p class="small muted">Firms with 50+ employees must hit their 2026 target, on the path to 10% for skilled roles.<sup><a href="#r3">3</a></sup><sup><a href="#r4">4</a></sup> A countdown series fits November–December.</p></div>
+          <div class="card"><span class="tag">KSA · Jan 2027</span><h4>Tourism leadership roles, phase 2</h4><p class="small muted">41 leadership and specialist tourism occupations localize in phases: April 2026, January 2027, January 2028.<sup><a href="#r2">2</a></sup></p></div>
+          <div class="card"><span class="tag">KSA · Now</span><h4>Engineering at 30%</h4><p class="small muted">Professional engineering (46 professions) at 30% from 30 June 2026, SAR 8,000 minimum, for establishments with 5+ engineers.<sup><a href="#r2">2</a></sup></p></div>
+        </div>
+      </div>
+      <div class="block b-rec"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+        <p class="rec-main">Publish each alert within 48 hours of a decision, always cite the official source, and end with an offer to check the reader's exposure.</p>
+        <div class="why"><b class="w">Why</b><ul>
+          <li>Being first with a clear explanation is what gets shared inside HR teams; a week later the news is common knowledge.</li>
+          <li>Citing HRSD or MoHRE protects credibility. A wrong quota in a compliance post costs more trust than it gains.</li>
+          <li>Dated deadlines (31 December, 14 February) give the CTA a natural reason to act now.</li>
+        </ul></div>
+      </div>
+      <div class="block b-act"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+        <ol class="steps">
+          <li><div><b>Build a "KSA Hiring Alert" / "UAE Emiratisation Update" carousel template</b> in the 4-step format.<div class="who-when"><span>Design</span><span>Week 2</span></div></div></li>
+          <li><div><b>Plan the first 3 alerts now</b>: Emiratisation year-end countdown, project management 70%, and the 69 reserved occupations.<div class="who-when"><span>HR Consultancy + Content</span><span>Weeks 2–4</span></div></div></li>
+          <li><div><b>Link every alert to the HR Consultancy page</b> with a "Check your Saudization exposure" CTA.<div class="who-when"><span>Marketing</span><span>Ongoing</span></div></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="pillar" id="s3c">
+      <div class="pillar-head"><span class="letter">C</span><h3>Real Hiring Cases</h3><span class="pct">20%</span></div>
+      <div class="block b-strat"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+        <p style="margin-bottom:10px">This must be very strong. Instead of a traditional testimonial ("We helped our client recruit…"):</p>
+        <div class="case4">
+          <div><span class="lab">The challenge</span><ul><li>12 vacancies</li><li>Riyadh</li><li>Sales &amp; Marketing</li><li>30-day deadline</li></ul></div>
+          <div><span class="lab">What we did</span><ul><li>Market mapping</li><li>Candidate sourcing</li><li>Pre-screening</li><li>Assessment</li></ul></div>
+          <div><span class="lab">Result</span><ul><li>Time-to-shortlist</li><li>Interviews</li><li>Placements</li></ul></div>
+          <div><span class="lab">CTA</span><p>Building a team in Saudi Arabia? Send us your hiring plan.</p></div>
+        </div>
+      </div>
+      <div class="block b-ex"><h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples from connectalents.com</h3>
+        <div class="cols3">
+          <div class="card"><span class="tag">Retail · UAE · RPO</span><p class="small">90-day time-to-hire → <b>45% faster</b>, 60% cost reduction, <b>120+ hires in 6 months</b>.</p></div>
+          <div class="card"><span class="tag">Fintech · Egypt · HRBPO</span><p class="small">Full HR department in <b>30 days</b>, <b>80% cost savings</b>.</p></div>
+          <div class="card"><span class="tag">Technology · MENA · EOR</span><p class="small"><b>3 markets</b> entered with <b>0 entities</b> needed.</p></div>
+        </div>
+        <p class="small muted" style="margin-top:8px">These three cases already exist on the website<sup><a href="#r17">17</a></sup> and can be reformatted straight away.</p>
+      </div>
+      <div class="block b-rec"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+        <p class="rec-main">Publish one new KSA case a month, anonymized by sector and city, and lead with the hardest constraint (deadline, nationality mix, salary cap).</p>
+        <div class="why"><b class="w">Why</b><ul>
+          <li>Two of the three current cases are outside KSA; the priority market needs its own proof.</li>
+          <li>Constraint-first stories match how buyers think ("we have 30 days") and show method, not just results.</li>
+          <li>Anonymizing removes the client sign-off delay that usually stops case studies.</li>
+        </ul></div>
+      </div>
+      <div class="block b-act"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+        <ol class="steps">
+          <li><div><b>Reformat the 3 website cases</b> into the Challenge → What we did → Result → CTA layout, as carousels and on the Case Studies page.<div class="who-when"><span>Content</span><span>Month 1</span></div></div></li>
+          <li><div><b>Collect metrics at day 60</b> of each engagement (time-to-shortlist, interviews, placements) for the next case.<div class="who-when"><span>Account managers</span><span>Ongoing</span></div></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="pillar" id="s3d">
+      <div class="pillar-head"><span class="letter">D</span><h3>"Available Talent" content</h3><span class="pct">15%</span></div>
+      <div class="block b-strat"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+        <p style="margin-bottom:10px">Every week: <b>Top Talent Available This Week, KSA</b>. No personal data, of course.</p>
+        <div class="cols3">
+          <div class="card"><h4>Sales Director, FMCG</h4><p class="small muted">12 years · Riyadh · Saudi National · Available in 30 days</p></div>
+          <div class="card"><h4>Finance Manager</h4><p class="small muted">9 years · Riyadh · Saudi National</p></div>
+          <div class="card"><h4>HRBP</h4><p class="small muted">8 years · Jeddah</p></div>
+        </div>
+        <p style="margin-top:10px"><b>CTA:</b> Want the profile? Comment "Talent" or DM us. We don't wait for the client to say "I have a vacancy". <b>We create the conversation.</b></p>
+      </div>
+      <div class="block b-ex"><h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Market evidence</h3>
+        <p>Recruitment firms have long marketed their "most placeable candidates" directly to employers. In KSA it is unusually strong: 75% of employers plan to add Saudi staff<sup><a href="#r6">6</a></sup> while Saudi unemployment sits at 6.4%,<sup><a href="#r5">5</a></sup> so pre-assessed Saudi profiles are scarce.</p>
+      </div>
+      <div class="block b-rec"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+        <p class="rec-main">Feature Saudi nationals in localized professions (marketing, sales, procurement, HR) and mark each profile "Hogan/SHL assessed". Get the candidate's written consent first.</p>
+        <div class="why"><b class="w">Why</b><ul>
+          <li>It ties the post directly to the quota pressure in pillar B, so the employer's need is already there.</li>
+          <li>"Assessed" shows something only Connectalents has: certified assessors.</li>
+          <li>Consent and anonymization keep the series in line with Saudi and UAE personal data protection laws and protect the candidate relationship.</li>
+        </ul></div>
+      </div>
+      <div class="block b-act"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+        <ol class="steps">
+          <li><div><b>Publish every Tuesday</b>: recruiters nominate 3 assessed candidates with written consent; show role, years, city, nationality and notice only.<div class="who-when"><span>Recruiters + Content</span><span>Weekly</span></div></div></li>
+          <li><div><b>Route every "Talent" comment or DM</b> to the owning recruiter within 24 hours and log it as an employer lead.<div class="who-when"><span>Recruiters</span><span>Ongoing</span></div></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="pillar" id="s3e">
+      <div class="pillar-head"><span class="letter">E</span><h3>Employer Pain content</h3><span class="pct">15%</span></div>
+      <div class="block b-strat"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+        <p style="margin-bottom:10px">Content that makes a CEO or HR Director say <b>"That's my problem."</b> This is real thought leadership.</p>
+        <div class="cols">
+          <div class="post">Your vacancy has been open for 63 days.<br>The problem may not be talent availability.<div class="tags" style="margin-top:10px"><span>Salary?</span><span>JD?</span><span>Interview process?</span><span>Employer brand?</span><span>Slow decisions?</span></div></div>
+          <div class="post">If your best candidate needs 4 interviews and 3 weeks to get an offer, you probably don't have a sourcing problem.</div>
+        </div>
+      </div>
+      <div class="block b-ex"><h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Market evidence</h3>
+        <p>In the 2025 Edelman–LinkedIn study, 65% of hidden decision makers preferred a human, less formal tone, and 91% valued insights that reveal problems they hadn't recognized.<sup><a href="#r12">12</a></sup> Employer pain posts do both.</p>
+      </div>
+      <div class="block b-rec"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+        <p class="rec-main">Give pillar E mainly to the CEO, and always include one diagnostic question the reader can check that day.</p>
+        <div class="why"><b class="w">Why</b><ul>
+          <li>Telling a client their process is the problem lands better from a peer-level voice than from a company page.</li>
+          <li>A diagnostic question moves the reader from agreeing to self-assessing, which is the step before booking a consultation.</li>
+        </ul></div>
+      </div>
+      <div class="block b-act"><h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+        <ol class="steps">
+          <li><div><b>Build a "pain bank"</b>: account managers log days-open, interview rounds and declined offers from live searches.<div class="who-when"><span>Account managers</span><span>Weekly</span></div></div></li>
+          <li><div><b>Turn 2 entries a week</b> into CEO posts with one diagnostic question each.<div class="who-when"><span>Content + CEO</span><span>Weekly</span></div></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 LEAD MAGNETS ============ -->
+<section class="sec" id="s4">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div>
+        <p class="kicker">Offers</p>
+        <h2>The most important part: lead magnets</h2>
+        <p class="lead">"Contact us for recruitment services" is a weak CTA. Every segment gets its own offer.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="cols3">
+        <div class="card"><span class="tag">Saudi Arabia</span><h4>Free Saudi Hiring Readiness Check</h4><p class="small muted">Connectalents reviews:</p><ul class="dots small"><li>Hiring plan</li><li>Roles</li><li>Salary competitiveness</li><li>Saudization implications</li><li>Talent availability</li></ul><p class="small" style="margin-top:6px">The client receives a <b>mini report</b>.</p></div>
+        <div class="card"><span class="tag">UAE</span><h4>Free UAE Salary &amp; Talent Availability Snapshot</h4><p class="small muted">Client: "Need 8 sales people in Dubai." Connectalents returns:</p><ul class="dots small"><li>Expected salary range</li><li>Talent availability</li><li>Estimated hiring difficulty</li><li>Likely time-to-fill</li></ul></div>
+        <div class="card"><span class="tag">Expansion companies</span><h4>Free MENA Workforce Expansion Plan</h4><p class="small muted">"You're opening in Saudi Arabia?" We answer:</p><ul class="dots small"><li>Recruit locally?</li><li>EOR?</li><li>Entity?</li><li>Payroll?</li><li>Saudization?</li><li>Expected hiring timeline?</li></ul><p class="small muted" style="margin-top:6px">A natural fit with the existing EOR service.</p></div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples &amp; market evidence</h3>
+      <div class="cols">
+        <div class="card"><span class="tag">Competitor practice</span><h4>Deel's Saudi hiring page</h4><p class="small muted">Global EOR providers put a self-serve tool next to the sales form: Deel's Saudi Arabia page links to an employee cost calculator alongside its "Book a demo" button.<sup><a href="#r16">16</a></sup> Connectalents can offer the same first step with a local expert behind it.</p></div>
+        <div class="card"><span class="tag">Demand</span><h4>Localization is on every plan</h4><p class="small muted">93% of KSA employers already employ Saudis and 75% plan to add more this year (Hays GCC Salary Guide 2026).<sup><a href="#r6">6</a></sup> A readiness check answers a question most of them have.</p></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Make the Saudi Hiring Readiness Check the flagship offer, and qualify it with a short form (company size, roles, cities) so recruiter time goes to real prospects.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>It ties to the most urgent trigger (quotas with dates) and the biggest market.</li>
+          <li>A tailored report is something a calculator can't give. It sets Connectalents apart from global EOR platforms.</li>
+          <li>The report shows the client the gap, and the gap leads naturally to the 15-minute consultation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Design a 2-page branded report template</b> for each offer, with fixed sections so a recruiter can complete one in under 2 hours.<div class="who-when"><span>Design + HR Consultancy</span><span>Weeks 2–3</span></div></div></li>
+        <li><div><b>Add 3 short intake forms</b> to the website and the 3 offers to the "Service Needed" dropdown.<div class="who-when"><span>Web</span><span>Week 3</span></div></div></li>
+        <li><div><b>Swap generic CTAs</b> on the KSA, UAE and EOR pages for the matching offer; keep the free consultation as the next step.<div class="who-when"><span>Marketing</span><span>Week 4</span></div></div></li>
+        <li><div><b>Set an SLA</b>: report within 3 business days, then a 15-minute walkthrough booked by the account manager.<div class="who-when"><span>Sales</span><span>From Week 4</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 OUTBOUND ============ -->
+<section class="sec" id="s5">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">05</div>
+      <div>
+        <p class="kicker">Revenue</p>
+        <h2>Organic outbound: where the money is</h2>
+        <p class="lead">Organic strategy ≠ content only. We use content as <b>air cover for outbound</b>.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <p class="small muted" style="margin-bottom:8px">Every week, pick companies showing a trigger:</p>
+      <div class="tags"><span>Funding</span><span>Opening Saudi office</span><span>Opening UAE office</span><span>20+ open vacancies</span><span>New HR Director</span><span>Expansion announcement</span><span>New project</span><span>New factory</span><span>New hotel</span><span>New branch</span></div>
+      <p class="small muted" style="margin:16px 0 8px">Then the owner runs:</p>
+      <div class="flow"><span>View</span><i>→</i><span>Follow</span><i>→</i><span>Engage</span><i>→</i><span>Connect</span><i>→</i><span>Value</span><i>→</i><span class="hot">DM</span></div>
+      <div class="vs">
+        <div class="no"><span class="lab">Not</span><p>Hi, we are Connectalents and provide recruitment services…</p></div>
+        <div class="yes"><span class="lab">But</span><p>Hi Ahmed, noticed you're building the Saudi team at X. We recently mapped the talent market for similar roles in Riyadh. Happy to share a quick salary/talent snapshot if useful, no pitch.</p></div>
+      </div>
+      <p style="margin-top:10px">A much stronger conversation opener.</p>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Market evidence</h3>
+      <div class="cols">
+        <div><div class="fact"><div class="fig">79%<small>buyer-initiated</small></div><p>of B2B buyers initiated contact with vendors themselves, and 94% ranked their shortlist before talking to any vendor (6sense 2025).<sup><a href="#r11">11</a></sup></p></div></div>
+        <div><div class="fact"><div class="fig">71%<small>never see sales</small></div><p>of hidden buyers have little or no interaction with sales reps, so content is the only way to reach them (Edelman–LinkedIn 2025).<sup><a href="#r12">12</a></sup></p></div></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Spread the 6 steps over 10–14 days, make the "Value" step one of the lead magnets, and keep the first DM free of any pitch.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>Most buyers pick their shortlist before talking to anyone. Engaging first puts Connectalents on that list before the DM arrives.</li>
+          <li>A value-first DM gets replies because the prospect gets something useful (a snapshot) without committing to a sales call.</li>
+          <li>Content reaches the wider buying group (CFO, COO) that the DM alone never reaches.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Write 4 DM openers</b>, one per buying situation, in the "noticed → we mapped → happy to share, no pitch" format. Retire the company-intro opener.<div class="who-when"><span>Sales + Content</span><span>Week 4</span></div></div></li>
+        <li><div><b>Run the 6-touch sequence</b>: view, follow, 2 thoughtful comments, connect without a pitch, share a relevant post or snapshot, then DM.<div class="who-when"><span>Sales + CEO</span><span>From Month 2</span></div></div></li>
+        <li><div><b>Block 30 minutes a day</b> for social selling and track touches made and conversations started each week.<div class="who-when"><span>Sales lead</span><span>Daily</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 SIGNALS DESK ============ -->
+<section class="sec" id="s6">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">06</div>
+      <div>
+        <p class="kicker">Tactical engine</p>
+        <h2>Build a "Hiring Signals Desk"</h2>
+        <p class="lead">Possibly their strongest tactical engine. Every week, marketing and sales track <b>50 target companies</b>, log them in the CRM, and Connectalents reaches out when the need appears.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <p class="small muted" style="margin-bottom:8px">Signals to track:</p>
+      <div class="tags"><span>New Saudi office</span><span>New UAE office</span><span>Funding</span><span>New project</span><span>Hiring surge</span><span>10+ vacancies</span><span>New CEO</span><span>New HR Director</span><span>Localization requirement</span></div>
+      <div class="vs" style="margin-top:16px">
+        <div class="no"><span class="lab">Instead of</span><p>Find companies → Sell recruitment</p></div>
+        <div class="yes"><span class="lab">It becomes</span><p>Find hiring signal → Understand problem → Offer intelligence → Start conversation</p></div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples &amp; market evidence</h3>
+      <div class="cols">
+        <div><div class="fact"><div class="fig">70%<small>first 100 days</small></div><p>Sales-intelligence vendor UserGems reports that new executives spend 70% of their budget in their first 100 days, and Director/VP hires convert 2.5× more in their first 3 months (vendor's own data).<sup><a href="#r15">15</a></sup></p></div></div>
+        <div><div class="fact"><div class="fig">34<small>RHQs in a quarter</small></div><p>New regional HQ licenses issued in Saudi Arabia in Q2 2025, published by the Ministry of Investment.<sup><a href="#r9">9</a></sup> Each one is a public "new Saudi office" signal.</p></div></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Rank signals and act on three first: <b>new HR leader</b>, <b>new KSA/UAE entity or RHQ</b>, and <b>10+ open roles in a localized profession</b>.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>A new HR leader is reviewing suppliers and has budget to spend early.</li>
+          <li>A new entity needs everything at once (EOR, payroll, recruitment), which gives the largest deal per account.</li>
+          <li>Open roles in a localized profession combine volume hiring with a compliance deadline, the strongest mix for Connectalents.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Name one desk owner</b> and fix the sources: LinkedIn Sales Navigator alerts (job changes, headcount growth), LinkedIn Jobs and Bayt listings, Ministry of Investment and MoHRE news, Argaam and Zawya.<div class="who-when"><span>Marketing coordinator</span><span>Week 5</span></div></div></li>
+        <li><div><b>Add CRM fields</b>: signal type, date, source link, buying situation, owner, next action.<div class="who-when"><span>Sales Ops</span><span>Week 5</span></div></div></li>
+        <li><div><b>Hold a 30-minute Monday hand-off</b>: the desk presents 50 new signals and sales picks the top 15 for that week's outbound sequence.<div class="who-when"><span>Marketing + Sales</span><span>Weekly</span></div></div></li>
+        <li><div><b>Review hit rates monthly</b> by signal type and drop signals that never become conversations.<div class="who-when"><span>Sales lead</span><span>Monthly</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 HIRING PULSE ============ -->
+<section class="sec" id="s7">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">07</div>
+      <div>
+        <p class="kicker">Recurring asset</p>
+        <h2>Own a recurring asset: Connectalents GCC Hiring Pulse</h2>
+        <p class="lead">A monthly report. One asset generates 10–15 pieces of content, and after 6–12 months Connectalents starts to own its own data and history.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="cols">
+        <div class="card" style="background:var(--navy);border-color:var(--navy);color:#fff">
+          <span class="tag" style="color:#8fe3a8">Monthly · e.g. September 2026</span>
+          <h4 style="color:#fff;font-size:19px;margin-bottom:10px">Connectalents GCC Hiring Pulse</h4>
+          <ul class="dots"><li>Top hiring sectors</li><li>Most demanded positions</li><li>Salary movements</li><li>Hardest positions to fill</li><li>Saudi hiring updates</li><li>UAE hiring updates</li><li>Saudization / Emiratisation updates</li></ul>
+        </div>
+        <div class="card">
+          <span class="tag">Turned into</span>
+          <div class="tags" style="margin-top:6px"><span>LinkedIn carousel</span><span>LinkedIn article</span><span>Website report</span><span>Email</span><span>CEO post</span><span>Short video</span><span>Sales PDF</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Real examples in this market</h3>
+      <div class="cols3">
+        <div class="card"><span class="tag">Hays</span><h4>GCC Salary Guide 2026</h4><p class="small muted">Annual guide built on 1,600+ employer and professional responses, released through regional media with headline Saudization and Emiratisation findings.<sup><a href="#r6">6</a></sup></p></div>
+        <div class="card"><span class="tag">Cooper Fitch</span><h4>Salary Guide UAE 2026</h4><p class="small muted">1,000+ organizations surveyed; its "1.6% salary growth" headline was covered by business media.<sup><a href="#r7">7</a></sup></p></div>
+        <div class="card"><span class="tag">Jisr</span><h4>State of Hiring in Saudi Arabia</h4><p class="small muted">An HR-tech platform's own data (4,700+ companies) became a widely cited "51.5% hiring surge" story.<sup><a href="#r8">8</a></sup></p></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Publish the Pulse monthly with the same 7 sections, and turn the Salary &amp; Benefits Survey into one annual flagship report pitched to regional media.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>The competitors above publish yearly. A monthly pulse gives Connectalents a fresher, more frequent voice in the same conversation.</li>
+          <li>Original data earns press coverage and backlinks that paid content doesn't.</li>
+          <li>A fixed structure keeps production fast and makes month-to-month trends easy to compare.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Fix the data sources</b>: internal vacancies and placements, the Salary &amp; Benefits Survey, Signals Desk logs, and public job-board counts.<div class="who-when"><span>Marketing + Survey team</span><span>Month 2</span></div></div></li>
+        <li><div><b>Set the monthly calendar</b>: data freeze on the 25th, draft on the 28th, publish on the 3rd working day.<div class="who-when"><span>Content</span><span>Monthly</span></div></div></li>
+        <li><div><b>Gate the full report</b> on the website (email required) and share a free summary on LinkedIn to grow the subscriber list.<div class="who-when"><span>Web</span><span>Month 2</span></div></div></li>
+        <li><div><b>Give sales the PDF version</b> for outbound DMs and proposals, and pitch the annual flagship to Arab News, Argaam, Gulf Business and Khaleej Times.<div class="who-when"><span>Sales + PR</span><span>Monthly</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 RECRUITERS ============ -->
+<section class="sec" id="s8">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">08</div>
+      <div>
+        <p class="kicker">Distribution</p>
+        <h2>Recruiters become the distribution network</h2>
+        <p class="lead">Not 5 employees reposting the company page. Each recruiter specializes, which builds <b>micro-authorities</b> around Connectalents.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="tbl" style="margin-bottom:14px">
+        <table style="min-width:420px">
+          <thead><tr><th>Recruiter</th><th>Specialty</th></tr></thead>
+          <tbody>
+            <tr><td>Recruiter 1</td><td class="go">Technology</td></tr>
+            <tr><td>Recruiter 2</td><td class="go">Sales &amp; Marketing</td></tr>
+            <tr><td>Recruiter 3</td><td class="go">Finance</td></tr>
+            <tr><td>Recruiter 4</td><td class="go">Executive Search</td></tr>
+            <tr><td>Recruiter 5</td><td class="go">Saudi Nationals</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cols">
+        <div class="post"><div class="who"><span class="av">R2</span>Sales &amp; Marketing Recruiter</div>I'm currently speaking with several strong Saudi sales candidates in Riyadh.</div>
+        <div class="post"><div class="who"><span class="av">R1</span>Technology Recruiter</div>I've interviewed 14 Senior Developers this week. One thing employers are underestimating…</div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Market evidence</h3>
+      <p>Half of Saudi Arabia's 10.9 million LinkedIn users are aged 25–34,<sup><a href="#r10">10</a></sup> the core of the candidate market. A recruiter's posts reach candidates and hiring managers at the same time, so one post feeds both sides of the business. Employee profiles also reach far more people per follower than brand pages.<sup><a href="#r13">13</a></sup></p>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Start with 3 recruiters, not 5: Sales &amp; Marketing, Saudi Nationals, and Executive Search. Add Technology and Finance in Month 3.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>These three map directly to the localization trigger (marketing and sales at 60%) and to the highest-value searches.</li>
+          <li>Three people posting consistently beat five posting now and then. Consistency is what builds a recognizable niche voice.</li>
+          <li>Technology can lean on ConnectSquads' existing presence when it joins.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Assign niches and update headlines</b>, e.g. "Sales &amp; Marketing Recruiter, KSA &amp; UAE | Connectalents".<div class="who-when"><span>Recruitment lead</span><span>Week 2</span></div></div></li>
+        <li><div><b>Run a 90-minute LinkedIn workshop</b>: profile, post formats, and what can and cannot be shared about candidates and clients.<div class="who-when"><span>Marketing</span><span>Week 3</span></div></div></li>
+        <li><div><b>Send each recruiter a weekly prompt pack</b> with 3 hooks from their own desk data, so a post takes 15 minutes.<div class="who-when"><span>Content</span><span>Weekly</span></div></div></li>
+        <li><div><b>Reward results, not reposts</b>: a monthly scoreboard of conversations and employer leads per recruiter.<div class="who-when"><span>Recruitment lead</span><span>Monthly</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 FUNNEL ============ -->
+<section class="sec" id="s9">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num">09</div>
+      <div>
+        <p class="kicker">The system</p>
+        <h2>The final funnel</h2>
+        <p class="lead">The whole engine is a <b>closed loop</b>, not a content calendar. Every case study feeds the content again.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="cols" style="align-items:center">
+        <div class="funnel">
+          <div style="width:100%">Hiring Signal</div><i>↓</i>
+          <div style="width:94%">Relevant Content</div><i>↓</i>
+          <div style="width:88%">CEO / Recruiter Engagement</div><i>↓</i>
+          <div style="width:82%;background:#3d3a8c">Free Hiring Intelligence</div><i>↓</i>
+          <div style="width:76%">15-minute Hiring Consultation</div><i>↓</i>
+          <div style="width:70%">Live Vacancy / Hiring Plan</div><i>↓</i>
+          <div style="width:64%;background:var(--green)">Recruitment / RPO / HRBPO / EOR</div><i>↓</i>
+          <div style="width:58%;background:var(--green-logo)">Case Study</div>
+          <i style="margin-top:4px;font-size:13px">↺ feeds the content again</i>
+        </div>
+        <div class="card">
+          <h4>How each point plugs in</h4>
+          <ul class="dots small">
+            <li><b>Hiring Signal</b>: Signals Desk (6)</li>
+            <li><b>Relevant Content</b>: 5 pillars (3) and Hiring Pulse (7)</li>
+            <li><b>Engagement</b>: CEO and recruiters (2, 8), outbound (5)</li>
+            <li><b>Free Hiring Intelligence</b>: lead magnets (4)</li>
+            <li><b>Consultation → Vacancy → Service</b>: sales process</li>
+            <li><b>Case Study</b>: back to pillar C (3)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="block b-ex">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" stroke="#55546f" stroke-width="2" fill="none"/><path d="M10.5 10.5 14 14" stroke="#55546f" stroke-width="2" stroke-linecap="round"/></svg></span>Market evidence</h3>
+      <p>More than 40% of B2B deals stall because of misalignment inside the buying group, and 79% of hidden decision makers say they are more likely to champion vendors that consistently publish strong thought leadership (Edelman–LinkedIn 2025).<sup><a href="#r12">12</a></sup> Connectalents' website already promises a proposal within 24 hours and onboarding within 48–72 hours,<sup><a href="#r17">17</a></sup> which is a ready-made SLA for the bottom of the funnel.</p>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Give the internal champion a "share pack" after every consultation: the mini report, one matching case study and the latest Hiring Pulse.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>The HR contact usually has to convince a CFO or CEO. Ready material speeds up internal approval, where deals most often stall.</li>
+          <li>It reuses assets already produced in points 3, 4 and 7, so it costs no extra content work.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Create one CRM pipeline</b> with these 8 stages and require a stage on every lead, whatever the source.<div class="who-when"><span>Sales Ops</span><span>Month 1</span></div></div></li>
+        <li><div><b>Standardize the 15-minute consultation</b>: fixed agenda (hiring plan, roles, timeline, compliance) and the 24-hour proposal SLA.<div class="who-when"><span>Sales</span><span>Month 1</span></div></div></li>
+        <li><div><b>Assemble the share pack template</b> and send it within 24 hours of every consultation.<div class="who-when"><span>Sales + Marketing</span><span>Month 2</span></div></div></li>
+        <li><div><b>Review stage-to-stage conversion monthly</b> and fix the weakest stage first.<div class="who-when"><span>Sales lead + Marketing</span><span>Monthly</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 90 DAYS ============ -->
+<section class="sec" id="d90">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num alt">90</div>
+      <div>
+        <p class="kicker">Execution</p>
+        <h2>The first 90 days</h2>
+        <p class="lead">Built for an October 2026 start, so Month 3 lands on the UAE's 31 December Emiratisation deadline.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="months">
+        <div class="month"><span class="when">Month 1 · Oct</span><h4>Build Authority</h4>
+          <ul class="dots small"><li>Set KSA + UAE as the priority</li><li>3–4 ICPs only</li><li>Launch the CEO personal brand</li><li>Recruiter advocacy</li><li>Hiring Alerts</li><li>Available Talent series</li><li>Prepare 3 lead magnets</li></ul></div>
+        <div class="month"><span class="when">Month 2 · Nov</span><h4>Build Conversations</h4>
+          <ul class="dots small"><li>Start the Hiring Signals Desk</li><li>About 50 target accounts weekly</li><li>Daily social selling</li><li>Launch the first GCC Hiring Pulse</li></ul></div>
+        <div class="month"><span class="when">Month 3 · Dec</span><h4>Turn it into Pipeline</h4>
+          <ul class="dots small"><li>Organically retarget everyone who engaged</li><li>Account-based content for target companies</li><li>Stronger case studies</li><li>Very small webinars, e.g. "Hiring in Saudi Arabia in 2027: What HR Leaders Need to Prepare For"</li><li>Connect everything to the CRM</li></ul></div>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Run a UAE "Emiratisation year-end countdown" in November–December, and schedule the webinar for early December around the 2027 Saudization changes.</p>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>The 31 December deadline<sup><a href="#r4">4</a></sup> gives UAE HR leaders a real reason to act in exactly this window.</li>
+          <li>The project management quota (14 February 2027) and the next tourism phase (January 2027) make "prepare for 2027" a concrete webinar topic, not a generic one.<sup><a href="#r2">2</a></sup></li>
+          <li>Small invite-only webinars (20–40 HR leaders from Signals Desk accounts) turn attendance directly into meetings.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block b-act">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Actualize at Connectalents</h3>
+      <ol class="steps">
+        <li><div><b>Hold a Week 1 kick-off</b> with the CEO, marketing, sales and recruitment leads to confirm an owner for every point in this plan.<div class="who-when"><span>CEO</span><span>Week 1</span></div></div></li>
+        <li><div><b>Hold a weekly 30-minute growth stand-up</b>: posts shipped, signals logged, conversations started, lead magnets requested.<div class="who-when"><span>Marketing lead</span><span>Weekly</span></div></div></li>
+        <li><div><b>Book the webinar in Month 2</b>, record it, and cut it into 5–8 short clips for January.<div class="who-when"><span>Marketing</span><span>Month 2</span></div></div></li>
+        <li><div><b>Hold a month-end review</b> against the KPI chain to decide what to scale and what to drop.<div class="who-when"><span>Leadership</span><span>Monthly</span></div></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KPIs ============ -->
+<section class="sec" id="kpis">
+  <div class="wrap">
+    <a class="top-link" href="#overview">↑ Contents</a>
+    <div class="sec-head">
+      <div class="num alt">K</div>
+      <div>
+        <p class="kicker">Measurement</p>
+        <h2>The KPIs that matter. Not followers.</h2>
+        <p class="lead">Every metric sits on the path from attention to revenue.</p>
+      </div>
+    </div>
+
+    <div class="block b-strat">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 3h10M3 8h10M3 13h6" stroke="#242264" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>The strategy</h3>
+      <div class="kpi">
+        <span>Target accounts engaged</span><i>→</i><span>Decision makers connected</span><i>→</i><span>DMs started</span><i>→</i><span>Hiring assessments requested</span><i>→</i><span>Meetings</span><i>→</i><span>Qualified opportunities</span><i>→</i><span>Vacancies received</span><i>→</i><span class="end">Revenue</span>
+      </div>
+    </div>
+
+    <div class="block b-rec">
+      <h3><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3 5 9 1.7 6l4.4-.5z" fill="#fff"/></svg></span>Recommendation &amp; why</h3>
+      <p class="rec-main">Set starting targets per KPI in Week 1, review them weekly, and recalibrate after Month 1 once real conversion rates exist.</p>
+      <div class="tbl" style="margin-top:14px">
+        <table>
+          <thead><tr><th>KPI</th><th>Where it comes from</th><th>Review</th></tr></thead>
+          <tbody>
+            <tr><td>Target accounts engaged</td><td>Signals Desk list + LinkedIn engagement</td><td>Weekly</td></tr>
+            <tr><td>Decision makers connected</td><td>CEO, sales and recruiter accept rates</td><td>Weekly</td></tr>
+            <tr><td>DMs started</td><td>Outbound sequence (point 5)</td><td>Weekly</td></tr>
+            <tr><td>Hiring assessments requested</td><td>Lead magnet forms (point 4)</td><td>Weekly</td></tr>
+            <tr><td>Meetings → Qualified opportunities</td><td>15-minute consultations in the CRM</td><td>Weekly</td></tr>
+            <tr><td>Vacancies received → Revenue</td><td>Signed engagements by service</td><td>Monthly</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="why"><b class="w">Why</b>
+        <ul>
+          <li>Follower counts don't predict pipeline. Each KPI above maps to one step of the funnel, so a drop shows exactly which step to fix.</li>
+          <li>Starting targets guessed in a plan are rarely right. One month of real data makes the second month's targets meaningful.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div class="closing">
+      <p class="eyebrow" style="color:#8fe3a8">The positioning opportunity</p>
+      <h2 style="margin-top:10px">Don't sell recruitment. Own <span>"Hiring Intelligence in MENA."</span></h2>
+      <p style="margin-top:14px;max-width:72ch">Connectalents already has recruitment data, a candidate pipeline, assessments, HR outsourcing, EOR and a presence in KSA and the UAE. Combined under <b style="color:#fff">Hiring Intelligence + Execution</b>, that is a much stronger differentiator than "recruitment agency".</p>
+      <div class="cards">
+        <div><h4>Next step: the Organic Client Acquisition Playbook</h4><p class="small">Detailed ICPs · offers · LinkedIn strategy · CEO strategy · 30 ready content ideas · Hiring Signals workflow · DM sequences from first engagement to meeting.</p></div>
+        <div><h4>Connectalents</h4><p class="small">connectalents.com<br>UAE +971 503 528 223 · Egypt +20 100 086 0102<br>linkedin.com/company/connectalents</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources" id="sources">
+  <div class="wrap">
+    <p class="eyebrow">References</p>
+    <h2 style="font-size:24px;margin-top:6px">Sources</h2>
+    <ol>
+      <li id="r1">HRSD, launch of a new phase of the developed Nitaqat program; EY Tax News, 4 May 2026. <a href="https://taxnews.ey.com/news/2026-0983-saudi-arabia-introduces-next-phase-of-developed-nitaqat-framework">taxnews.ey.com</a></li>
+      <li id="r2">Gulf Business, "Saudisation quotas: here are the rates across Saudi Arabia's key job sectors," 2026. <a href="https://gulfbusiness.com/en/2026/jobs/saudisation-quotas-here-are-the-rates-across-saudi-arabias-key-job-sectors/">gulfbusiness.com</a></li>
+      <li id="r3">HRD / HCAMag, UAE Emiratisation targets and fines. <a href="https://www.hcamag.com/asia/specialisation/employment-law/uae-employers-warned-of-aed500000-fine-for-evading-emiratisation-targets/445078">hcamag.com</a></li>
+      <li id="r4">Gulf News, "Meet Emiratisation targets by December 31 or face fines, warns MoHRE." <a href="https://gulfnews.com/uae/meet-emiratisation-targets-by-december-31-or-face-fines-warns-mohre-1.500322794">gulfnews.com</a></li>
+      <li id="r5">Gulf News, "Saudi unemployment falls to 6.4% in Q1 2026." <a href="https://gulfnews.com/world/gulf/saudi/saudi-unemployment-falls-to-64-in-q1-2026-1.500592445">gulfnews.com</a></li>
+      <li id="r6">Zawya, "Hays Middle East releases Hays GCC Salary Guide 2026." <a href="https://www.zawya.com/en/press-release/research-studies/hays-middle-east-releases-hays-gcc-salary-guide-2026-369616">zawya.com</a></li>
+      <li id="r7">Enterprise, "UAE salary growth to slow in 2026" (Cooper Fitch Salary Guide UAE 2026), 27 Nov 2025. <a href="https://enterpriseam.com/uae/2025/11/27/uae-salary-growth-to-slow-in-2026-amid-heightened-competition/">enterpriseam.com</a></li>
+      <li id="r8">MENA Startup Digest, Jisr "State of Hiring in Saudi Arabia," 51.5% surge in 2025. <a href="https://menastartupdigest.com/?p=26700">menastartupdigest.com</a></li>
+      <li id="r9">Argaam, "Investment Ministry: 34 licenses issued for regional HQs in Q2 2025." <a href="https://www.argaam.com/en/article/articledetail/id/1838307">argaam.com</a></li>
+      <li id="r10">NapoleonCat, LinkedIn users in Saudi Arabia, September 2026. <a href="https://napoleoncat.com/stats/linkedin-users-in-saudi-arabia/">napoleoncat.com</a></li>
+      <li id="r11">6sense 2025 B2B Buyer Experience Study, via CustomerThink. <a href="https://customerthink.com/research-round-up-6sense-study-provides-critical-insights-on-b2b-buyer-behavior/">customerthink.com</a></li>
+      <li id="r12">Edelman–LinkedIn 2025 B2B Thought Leadership Impact Report (<a href="https://www.edelman.com/expertise/business-marketing/2025-b2b-thought-leadership-report">edelman.com</a>); figures as summarized by <a href="https://www.contentgrip.com/edelman-linkedin-thought-leadership-report/">ContentGrip</a>.</li>
+      <li id="r13">Refine Labs, "Employee Profiles Outperform Brand Pages on LinkedIn," Feb 2026 (own account data). <a href="https://www.refinelabs.com/article/employee-profiles-outperform-brand-pages-linkedin">refinelabs.com</a></li>
+      <li id="r14">Socialinsider, "LinkedIn Carousel: Performance Data, Tips and Best Practices," 2026. <a href="https://www.socialinsider.io/blog/linkedin-carousel/">socialinsider.io</a></li>
+      <li id="r15">UserGems, "New hire buying signal" (vendor data). <a href="https://www.usergems.com/blog/new-hire-buying-signal">usergems.com</a></li>
+      <li id="r16">Deel, "Hire and pay employees in Saudi Arabia." <a href="https://www.deel.com/hiring/employees/saudi-arabia/">deel.com</a></li>
+      <li id="r17">Connectalents website: services, case studies, process and figures. <a href="https://connectalents.com/">connectalents.com</a></li>
+    </ol>
+    <p class="disc">Regulatory figures change often. Confirm each quota, deadline and fine against the official HRSD (KSA) or MoHRE (UAE) announcement before publishing. Figures marked as vendor data (Refine Labs, UserGems) come from the companies' own accounts and are directional.</p>
+  </div>
+</section>
+</main>
+
+<div class="wrap">
+  <footer>
+    <img src="assets/connectalents-logo.png" alt="Connectalents">
+    <span>Organic Client Acquisition · Strategy &amp; Action Plan · October 2026</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#chips a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=['overview','context','s1','s2','s3','s4','s5','s6','s7','s8','s9','d90','kpis','sources'];
+  var secs=ids.map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function setOn(id){
+    if(id==='context')id='overview';
+    links.forEach(function(a){a.classList.remove('on');});
+    var a=map[id]; if(!a)return; a.classList.add('on');
+    var bar=document.getElementById('chips');
+    var l=a.offsetLeft-bar.offsetLeft, r=l+a.offsetWidth;
+    if(l<bar.scrollLeft||r>bar.scrollLeft+bar.clientWidth){bar.scrollTo({left:Math.max(0,l-40),behavior:'smooth'});}
+  }
+  function onScroll(){
+    var y=window.scrollY+120, cur=null;
+    secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+    if(cur)setOn(cur); else links.forEach(function(a){a.classList.remove('on');});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
